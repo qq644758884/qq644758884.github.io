@@ -162,7 +162,7 @@ Garden.options = {
     color: {
         // rmin: 128,
         rmin: 0,
-        rmax: 255,
+        rmax: 160,
         gmin: 0,
         gmax: 128,
         bmin: 0,
