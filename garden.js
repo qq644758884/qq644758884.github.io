@@ -160,7 +160,8 @@ Garden.options = {
     density: 10,
     growSpeed: 1000 / 60,
     color: {
-        rmin: 128,
+        // rmin: 128,
+        rmin: 0,
         rmax: 255,
         gmin: 0,
         gmax: 128,
@@ -188,12 +189,14 @@ Garden.rgba = function (r, g, b, a) {
 };
 Garden.randomrgba = function (rmin, rmax, gmin, gmax, bmin, bmax, a) {
     var r = Math.round(Garden.random(rmin, rmax));
-    var g = Math.round(Garden.random(gmin, gmax));
-    var b = Math.round(Garden.random(bmin, bmax));
-    var limit = 5;
-    if (Math.abs(r - g) <= limit && Math.abs(g - b) <= limit && Math.abs(b - r) <= limit) {
-        return Garden.rgba(rmin, rmax, gmin, gmax, bmin, bmax, a);
-    } else {
+    // var g = Math.round(Garden.random(gmin, gmax));
+    // var b = Math.round(Garden.random(bmin, bmax));
+    var g = r;
+    var b = r;
+    // var limit = 5;
+    // if (Math.abs(r - g) <= limit && Math.abs(g - b) <= limit && Math.abs(b - r) <= limit) {
+    //     return Garden.rgba(rmin, rmax, gmin, gmax, bmin, bmax, a);
+    // } else {
         return Garden.rgba(r, g, b, a);
-    }
+    // }
 };
